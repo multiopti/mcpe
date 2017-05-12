@@ -40,7 +40,6 @@ class VectorSet:
     size = 0
     
     def add(self,V):
-        # Reference the name
         if self.size == 0:
             self.data = V
             self.dim = len(V)
@@ -54,5 +53,15 @@ class VectorSet:
         print(self.data)
         print("\n")
         print('Size= %d' %self.size)
+        
+    def plts(self,V): #classic partially less than set
+        if self.size == 0:
+            return 0
+        else:
+            result = 0
+            for i in range(0,self.size):
+                if pltc(V,self.data[i:i+1,:]):
+                    result = 1
+            return result
 
     
